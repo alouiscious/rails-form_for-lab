@@ -42,3 +42,16 @@ If you run into issues drawing the routes, inspect element on the forms to see w
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-form_for-lab' title='form_for Lab'>form_for Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-form_for-lab'>form_for lab </a> on Learn.co and start learning to code for free.</p>
+
+
+
+NOTES:
+rails generate resource school_classes see:
+
+configuration
+dependecies
+database
+mvc
+
+highleven is overview look from a step back
+lowerlevel is focused implementation details

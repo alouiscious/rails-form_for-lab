@@ -46,3 +46,135 @@ Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (0.6ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 2]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClass (2)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClass (2)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClass (2)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClass (2)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (2)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateSchoolClasses < ActiveRecord::Migration[4.2] (called from block in execute at /Users/susansims/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "2"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-12-02 22:40:08.796150"], ["updated_at", "2019-12-02 22:40:08.796150"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/students" for ::1 at 2019-12-02 20:23:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/susansims/OnMyMac/Flatiron/PT 071519/Rails/rails-form_for-lab/app/views/students/index.html.erb:3: syntax error, unexpected ';', expecting ']'
+...r.safe_append='  <div>'.freeze;@output_buffer.append=( stude...
+...                              ^):
+  
+app/views/students/index.html.erb:3: syntax error, unexpected ';', expecting ']'
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+Started GET "/students" for ::1 at 2019-12-02 20:32:00 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 363ms (Views: 349.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/students" for ::1 at 2019-12-02 20:33:10 -0800
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for ::1 at 2019-12-02 20:34:13 -0800
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/new" for ::1 at 2019-12-02 20:34:21 -0800
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-12-02 20:34:28 -0800
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vNgUZIFQ47K/0sr1prxrsIKOwyF1KijW3/Wp7c0B54Z8QPlTzQVR8p1qNY6hktWrjCzculNVM0FI3QW80heRqA==", "student"=>{"first_name"=>"bugs", "last_name"=>"bunny"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "bugs"], ["last_name", "bunny"], ["created_at", "2019-12-03 04:34:28.423604"], ["updated_at", "2019-12-03 04:34:28.423604"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (undefined local variable or method `new_student' for #<StudentsController:0x00007f98d3d66aa0>
+Did you mean?  new_student_url):
+  
+app/controllers/students_controller.rb:14:in `create'
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+Started GET "/students/new" for ::1 at 2019-12-02 20:38:31 -0800
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/students" for ::1 at 2019-12-02 20:38:36 -0800
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AkZbwjoBbpBRf4CjWO1CxTt5imecpDzj0FEpYlBfMYvC3rb1dlTc0HPHf9hfw/zeNduV/LrbJ3RHeYUzT0lHpQ==", "student"=>{"first_name"=>"bugs", "last_name"=>"bunny"}, "commit"=>"Create Student"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "bugs"], ["last_name", "bunny"], ["created_at", "2019-12-03 04:38:36.758698"], ["updated_at", "2019-12-03 04:38:36.758698"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.2ms)
+
+
+  
+NameError (undefined local variable or method `new_student' for #<StudentsController:0x00007f98d3d4e428>
+Did you mean?  new_student_url):
+  
+app/controllers/students_controller.rb:14:in `create'
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/susansims/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.8ms)
