@@ -1,9 +1,9 @@
 <h1>Student Edit</h1>
-<%= form_for(@students) do |f| %>
-  <%= f.label 'First Name:' %><br>
+<%= form_for(@student) do |f| %>
+  <%= f.label :first_name %>
   <%= f.text_field :first_name %><br>
 
-  <%= f.label'Last Name:' %><br>
+  <%= f.label :last_name %>
   <%= f.text_field :last_name %><br>
 
   <%= f.submit %>

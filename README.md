@@ -53,5 +53,5 @@ dependecies
 database
 mvc
 
-highleven is overview look from a step back
+highlevel is overview look from a step back
 lowerlevel is focused implementation details

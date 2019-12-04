@@ -3,33 +3,35 @@ class StudentsController < ApplicationController
     @students = Student.all    
   end
 
+  def show
+    @student = Student.find(params[:id])
+  end
+
   def new
     @student = Student.new
-
   end
 
   def create
-    @student = Student.new(student_params(:first_name, :last_name))
+    @student = Student.new(student_params)
     @student.save
-    redirect_to @student
-  end
-
-  def update
-    @student = Student.find(params[:id])
-    @student = Student.update(:first_name, :last_name)
+    redirect_to student_path(@student)
   end
 
   def edit
     @student = Student.find(params[:id])
   end
 
-  def show
+  def update
     @student = Student.find(params[:id])
-    
+    @student = Student.update(student_params)
+    redirect_to student_path(@student)
+  
   end
 
+
+
   private
-    def student_params(*args)
-      params.require(:student).permit(*args)    
+    def student_params
+      params.require(:student).permit(:first_name, :last_name)    
     end
 end
